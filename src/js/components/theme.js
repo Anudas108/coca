@@ -11,12 +11,11 @@ export const useTheme = () => {
   }
 
   themeSwitcher.addEventListener('click', () => {
-
     if (themeTargetDataset.theme === 'light') {
-      themeTargetDataset.theme = 'dark'
+      themeTargetDataset.theme = 'dark';
       localStorage.setItem('theme', 'dark');
     } else {
-      themeTargetDataset.theme = 'light'
+      themeTargetDataset.theme = 'light';
       localStorage.setItem('theme', 'light');
     }
   });

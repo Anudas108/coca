@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import  injectHTML  from 'vite-plugin-html-inject';
+import injectHTML from 'vite-plugin-html-inject';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
@@ -16,8 +16,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './src/index.html',
-      }
-    }
+      },
+    },
   },
 
   plugins: [
@@ -30,7 +30,6 @@ export default defineConfig({
       jpg: {
         quality: 80,
       },
-    })
-  ]
-
+    }),
+  ],
 });
