@@ -1,0 +1,111 @@
+.hero {
+  padding: 105px 0 135px;
+
+  @include tablet {
+    padding: 75px 0 95px;
+  }
+
+  @include small-mobile {
+    padding: 60px 0 70px;
+  }
+
+  &__title {
+    margin-bottom: 118px;
+    max-width: 950px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -3px;
+    text-align: left;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      margin-bottom: 78px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 58px;
+      letter-spacing: -1px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__bottom {
+    @include flex-all-between;
+    gap: 20px;
+
+    @include small-tablet {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include tablet {
+      gap: 40px;
+    }
+
+    @include small-mobile {
+      gap: 30px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 838px;
+    line-height: 42px;
+    text-align: left;
+    color: var(--neutral-color-100);
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 215px;
+      height: 1px;
+      background-color: var(--neutral-color-100);
+      transform: translateY(-62px);
+    }
+
+    @include mini-desktop {
+      max-width: 675px;
+
+      &::before {
+        transform: translateY(-83px);
+      }
+    }
+
+    @include tablet {
+      max-width: 578px;
+      text-align: center;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    cursor: pointer;
+  }
+
+  &__svg {
+    & svg path,
+    & svg rect,
+    & svg circle {
+      fill: var(--neutral-color-90);
+    }
+
+    & svg {
+      @include small-mobile {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+}
