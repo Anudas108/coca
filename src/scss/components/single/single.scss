@@ -1,0 +1,287 @@
+.single {
+  padding: 80px 220px 160px 250px;
+
+  @include mini-desktop {
+    padding: 80px 160px 160px 180px;
+  }
+
+  @include tablet {
+    padding: 80px 100px 160px 120px;
+  }
+
+  @include small-tablet {
+    padding: 60px 80px 120px 100px;
+  }
+
+  @include mobile {
+    padding: 30px 30px 80px 50px;
+  }
+
+  @include small-mobile {
+    padding: 20px 20px 60px 30px;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    max-width: 970px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -2px;
+    text-align: left;
+    color: var(--neutral-color-100);
+
+    @include mini-desktop {
+      max-width: 700px;
+    }
+
+    @include mobile {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__descr {
+    @include flex-justify-between;
+    gap: 15px;
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    &-left {
+      &-author {
+        @include flex-align-center;
+        gap: 24px;
+
+        @include tablet {
+          gap: 16px;
+        }
+
+        &-descr {
+          &-name {
+            margin-bottom: 4px;
+            font-weight: 600;
+            line-height: 26px;
+            letter-spacing: 0;
+            text-align: left;
+            color: var(--neutral-color-100);
+
+            @include tablet {
+              margin-bottom: 0;
+            }
+          }
+
+          &-post {
+            font-weight: 500;
+            line-height: 26px;
+            letter-spacing: 0;
+            text-align: left;
+            color: var(--neutral-color-150);
+          }
+        }
+      }
+    }
+
+    &-right {
+      &-data {
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: left;
+        color: var(--neutral-color-150);
+      }
+    }
+  }
+
+  &__img {
+    margin-bottom: 80px;
+    width: 100%;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 56px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0;
+    text-align: left;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0;
+    text-align: left;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    gap: 48px;
+
+    @include tablet {
+      gap: 34px;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+
+    @include small-mobile {
+      gap: 26px;
+    }
+
+    &-avatar {
+      width: 200px;
+      height: 200px;
+
+      @include tablet {
+        width: 180px;
+        height: 180px;
+      }
+
+      @include mobile {
+        width: 150px;
+        height: 150px;
+      }
+
+      @include small-mobile {
+        width: 130px;
+        height: 130px;
+      }
+    }
+
+    &-descr {
+      &-socials {
+        @include flex-align-center;
+        gap: 32px;
+        margin-bottom: 14px;
+
+        @include tablet {
+          gap: 24px;
+        }
+
+        @include small-tablet {
+          margin-bottom: 28px;
+        }
+
+        @include mobile {
+          gap: 16px;
+        }
+
+        @include small-mobile {
+          gap: 10px;
+        }
+
+        &-facebook,
+        &-twitter,
+        &-linkedin,
+        &-instagram {
+          @include flex-all-center;
+          flex-shrink: 0;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          background-color: var(--neutral-color-160);
+
+          & svg path {
+            fill: var(--neutral-color-100);
+          }
+        }
+
+        &-share {
+          font-weight: 500;
+          line-height: 26px;
+          letter-spacing: 0;
+          text-align: left;
+          color: var(--neutral-color-100);
+
+          @include mobile {
+            line-height: 18px;
+          }
+        }
+
+      }
+
+      &-by {
+        margin-bottom: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0;
+        text-align: left;
+        color: var(--neutral-color-150);
+
+        @include mobile {
+          margin-bottom: 10px;
+        }
+
+        @include small-mobile {
+          margin-bottom: 0;
+        }
+      }
+
+      &-name {
+        margin-bottom: 16px;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: -1px;
+        text-align: left;
+        color: var(--neutral-color-100);
+
+        @include mobile {
+          margin-bottom: 10px;
+        }
+
+        @include small-mobile {
+          margin-bottom: 0;
+        }
+      }
+
+      &-post {
+        margin-bottom: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0;
+        text-align: left;
+        color: var(--neutral-color-150);
+      }
+
+      &-skill {
+        max-width: 650px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0;
+        text-align: left;
+        color: var(--neutral-color-100);
+      }
+    }
+  }
+}
