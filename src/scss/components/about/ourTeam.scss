@@ -1,0 +1,220 @@
+.ourteam {
+  padding: 70px 0 165px;
+
+  @include tablet {
+    padding: 30px 0 120px;
+  }
+
+  @include mobile {
+    padding: 10px 0 80px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 24px;
+    max-width: 880px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -1px;
+    text-align: left;
+    color: var(--neutral-color-100);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -335px;
+      z-index: -1;
+      width: 525px;
+      height: 525px;
+      background: #E2F8F0B3;
+      opacity: 0.4;
+      filter: blur(180px);
+
+      @include mini-desktop {
+        right: 0;
+        width: 450px;
+        height: 450px;
+      }
+
+      @include mobile {
+        width: 320px;
+        height: 320px;
+      }
+    }
+
+    @include tablet {
+      margin: 0 auto 44px;
+      max-width: 600px;
+      text-align: center;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 80px;
+    max-width: 534px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0;
+    text-align: left;
+    color: var(--neutral-color-150);
+
+    @include tablet {
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+    margin-bottom: 105px;
+
+    @include mobile {
+      margin-bottom: 60px;
+    }
+
+    &-btns {
+      position: absolute;
+      top: 33%;
+      left: 33%;
+      z-index: var(--z-index-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #7e8492;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include tablet {
+        left: 50%;
+      }
+
+      @include small-tablet {
+        top: 37%;
+        width: 60px;
+        height: 60px;
+      }
+
+      @include mobile {
+        top: 70%;
+        left: 87%;
+      }
+
+      @include small-mobile {
+        top: 64%;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &-slide {
+      & img {
+        margin-bottom: 16px;
+      }
+
+      &-descr {
+        @include flex-all-between;
+        align-items: flex-start;
+        max-width: 379px;
+
+        &-descr {
+          max-width: 215px;
+        }
+
+        &-name {
+          margin-bottom: 8px;
+          font-weight: 600;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: left;
+          color: var(--neutral-color-100);
+        }
+
+        &-post {
+          font-weight: 500;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: left;
+          color: var(--neutral-color-150);
+        }
+
+        &-cocial {
+          display: flex;
+          gap: 4px;
+
+          &-twitter,
+          &-linkedIn,
+          &-instagram {
+            @include flex-all-center;
+            flex-shrink: 0;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            background-color: var(--neutral-color-30);
+
+            & svg path {
+              fill: #1d1e25;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @include flex-all-between;
+    gap: 71px;
+
+    @include tablet {
+      gap: 50px;
+      flex-direction: column;
+    }
+
+    &-title {
+      max-width: 626px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -1px;
+      text-align: left;
+      color: var(--neutral-color-100);
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+
+    &-inner {
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &-text {
+        margin-bottom: 24px;
+        max-width: 506px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0;
+        text-align: left;
+        color: var(--neutral-color-150);
+
+        @include tablet {
+          margin-bottom: 50px;
+          text-align: center;
+        }
+      }
+
+      &-link {
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0;
+        text-align: left;
+        color: var(--neutral-color-100);
+      }
+    }
+  }
+}
