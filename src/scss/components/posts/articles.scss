@@ -146,3 +146,11 @@
     }
   }
 }
+
+.swiper.swiper-right-articles {
+  margin-right: -80px;
+
+  @include tablet {
+    margin-right: auto;
+  }
+}

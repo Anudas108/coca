@@ -265,3 +265,11 @@
     }
   }
 }
+
+.swiper.swiper-right-hero {
+  margin-right: -80px;
+
+  @include tablet {
+    margin-right: auto;
+  }
+}
