@@ -14,12 +14,60 @@
   }
 
   &__title {
+    position: relative;
     margin-bottom: 53px;
     font-weight: 700;
     line-height: 120%;
     letter-spacing: -3px;
     text-align: left;
     color: var(--neutral-color-100);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -55px;
+      left: 0;
+      width: 551px;
+      height: 551px;
+      background: rgb(250, 117, 21);
+      opacity: 0.23;
+      filter: blur(220px);
+
+      @include tablet {
+        left: 108px;
+      }
+
+      @include small-tablet {
+        top: 0;
+        width: 300px;
+        height: 300px;
+        opacity: 0.5;
+      }
+
+      @include mobile {
+        top: 60px;
+        left: 60px;
+      }
+
+      @include small-mobile {
+        left: 0;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 170px;
+      left: 790px;
+      width: 525px;
+      height: 525px;
+      background: rgba(226, 248, 240, 0.2);
+      filter: blur(180px);
+
+      @include mini-desktop {
+        display: none;
+      }
+    }
 
     @include small-tablet {
       text-align: center;
